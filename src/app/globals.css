@@ -1,27 +1,46 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+body{
+  @apply bg-white font-satoshi;
+}
+
+
+@layer base {
+  :root {
+    /* Primary Base (#D4FB20) */
+    --primary: 68 96% 55%;
+    --primary-foreground: 0 0% 0%;
+
+    /* Primary Shades */
+    --primary-light: 68 96% 65%;
+    --primary-lighter: 68 96% 75%;
+    --primary-dark: 68 80% 45%;
+    --primary-darker: 68 75% 35%;
+
+    /* Hover & Ring */
+    --primary-hover: 68 90% 48%;
+    --ring: 68 96% 55%;
+  }
+
+  .dark {
+    --primary: 68 96% 55%;
+    --primary-foreground: 0 0% 0%;
+
+    --primary-light: 68 96% 65%;
+    --primary-lighter: 68 96% 75%;
+    --primary-dark: 68 80% 45%;
+    --primary-darker: 68 75% 35%;
+
+    --primary-hover: 68 90% 48%;
+    --ring: 68 96% 55%;
   }
 }
