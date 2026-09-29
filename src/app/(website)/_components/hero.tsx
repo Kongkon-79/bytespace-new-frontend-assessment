@@ -1,8 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import { motion, useReducedMotion } from "framer-motion";
+import { animate, motion, useMotionValue, useReducedMotion, useTransform } from "framer-motion";
 import { Search, Star } from "lucide-react";
+import { useEffect } from "react";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -14,6 +15,21 @@ const studentAvatars = Array.from(
 
 const Hero = () => {
   const shouldReduceMotion = useReducedMotion();
+  const progress = useMotionValue(shouldReduceMotion ? 55 : 0);
+  const displayedProgress = useTransform(progress, (value) => Math.round(value));
+
+  useEffect(() => {
+    if (shouldReduceMotion) return;
+
+    const controls = animate(progress, 55, {
+      duration: 0.9,
+      delay: 1.25,
+      ease: "easeOut",
+    });
+
+    return () => controls.stop();
+  }, [progress, shouldReduceMotion]);
+
   const float = (distance: number, duration: number, delay = 0) =>
     shouldReduceMotion
       ? {}
@@ -67,7 +83,7 @@ const Hero = () => {
           initial={shouldReduceMotion ? false : { opacity: 1, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.65, delay: 0.15, ease: "easeOut" }}
-          className="mx-auto mt-6 max-w-[700px] text-sm leading-6 text-[#e5e6e8] sm:text-[15px] lg:mt-[54px] lg:max-w-none lg:text-[18px] lg:leading-[29px]"
+          className="mx-auto mt-6 max-w-[700px] text-sm leading-6 text-[#e5e6e8] sm:text-[15px] lg:mt-8 lg:max-w-none lg:text-[18px] lg:leading-[29px] 2xl:mt-[54px]"
         >
           Unlock your creativity, gain valuable knowledge, and grow your business with our wide range of courses.
         </motion.p>
@@ -79,7 +95,7 @@ const Hero = () => {
           initial={shouldReduceMotion ? false : { opacity: 1, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.65, delay: 0.28, ease: "easeOut" }}
-          className="mx-auto mt-10 flex max-w-[415px] flex-col gap-3 sm:max-w-[415px] sm:flex-row lg:mt-[60px] lg:max-w-[582px] lg:gap-4"
+          className="mx-auto mt-10 flex max-w-[415px] flex-col gap-3 sm:max-w-[415px] sm:flex-row lg:mt-10 lg:max-w-[582px] lg:gap-4 2xl:mt-[60px]"
         >
           <div className="relative flex-1">
             <label htmlFor="hero-course-search" className="sr-only">
@@ -119,7 +135,7 @@ const Hero = () => {
         aria-hidden="true"
         initial={shouldReduceMotion ? false : { opacity: 1, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1, ...float(6, 5.5, 0.7) }}
-        className="absolute left-[9%] top-[390px] z-10 hidden w-[82px] sm:block lg:left-[calc(15%-20px)] lg:top-[373px] lg:w-[105px]"
+        className="absolute left-[9%] top-[390px] z-10 hidden w-[104px] sm:block lg:left-[calc(15%-20px)] lg:top-[373px] lg:w-[132px]"
       >
         <Image src="/images/hero/hero-shape-left-white.png" alt="" width={177} height={176} className="h-auto w-full" />
       </motion.div>
@@ -137,7 +153,7 @@ const Hero = () => {
         aria-hidden="true"
         initial={shouldReduceMotion ? false : { opacity: 1, rotate: -12, scale: 0.8 }}
         animate={{ opacity: 1, rotate: 0, scale: 1, ...float(7, 5.8, 0.8) }}
-        className="absolute right-[11%] top-[385px] z-10 hidden w-[82px] sm:block lg:right-[calc(13%+18px)] lg:top-[356px] lg:w-[123px]"
+        className="absolute right-[11%] top-[385px] z-10 hidden w-[104px] sm:block lg:right-[calc(13%+18px)] lg:top-[356px] lg:w-[150px]"
       >
         <Image src="/images/hero/hero-shape-triangle.png" alt="" width={190} height={189} className="h-auto w-full" />
       </motion.div>
@@ -201,12 +217,12 @@ const Hero = () => {
         className="absolute bottom-[162px] right-3 z-30 w-[145px] rounded-xl bg-white p-3 text-left text-[#2b2d31] shadow-[0_12px_30px_rgba(0,0,0,0.13)] sm:bottom-[190px] sm:right-[calc(50%-255px)] sm:w-[166px] lg:bottom-auto lg:left-[calc(50%+122px)] lg:right-auto lg:top-[531px] lg:w-[232px] lg:rounded-2xl lg:p-4"
       >
         <p className="text-[10px] font-medium sm:text-[11px] lg:text-sm">Learning Progress</p>
-        <p className="mt-1 text-[32px] font-bold leading-none sm:text-[36px] lg:text-[48px] lg:leading-[1.2]">55%</p>
+        <p className="mt-1 text-[32px] font-bold leading-none sm:text-[36px] lg:text-[48px] lg:leading-[1.2]"><motion.span>{displayedProgress}</motion.span>%</p>
         <div className="mt-3 h-1.5 overflow-hidden rounded-full bg-[#f1f1f1] lg:h-2 lg:w-[200px]">
           <motion.div
             initial={shouldReduceMotion ? false : { width: 0 }}
             animate={{ width: "55%" }}
-            transition={{ duration: 0.9, delay: 1.25, ease: "easeOut" }}
+            transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.9, delay: 1.25, ease: "easeOut" }}
             className="h-full rounded-full bg-primary"
           />
         </div>
