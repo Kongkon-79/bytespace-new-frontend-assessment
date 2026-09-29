@@ -19,13 +19,13 @@ const Hero = () => {
       ? {}
       : {
           y: [0, -distance, 0],
-          transition: { duration, delay, repeat: Infinity, ease: "easeInOut" as const },
+          transition: { duration, delay, repeat: Infinity, repeatType: "mirror" as const, ease: [0.42, 0, 0.58, 1] as const },
         };
 
   return (
     <section
       aria-labelledby="hero-heading"
-      className="relative isolate min-h-[760px] overflow-hidden bg-[#003be2] px-5 text-white sm:min-h-[820px] sm:px-8 lg:h-[904px] lg:min-h-[904px]"
+      className="relative isolate min-h-[760px] overflow-hidden bg-[#003be2] px-5 text-white sm:min-h-[820px] sm:px-8 lg:h-[885px] lg:min-h-[885px]"
     >
       <div
         aria-hidden="true"
@@ -37,7 +37,7 @@ const Hero = () => {
         className="pointer-events-none absolute bottom-0 left-1/2 z-0 w-[820px] -translate-x-1/2 sm:w-[980px] lg:w-[1149px]"
       >
         <motion.div
-          initial={shouldReduceMotion ? false : { opacity: 0, scale: 0.94 }}
+          initial={shouldReduceMotion ? false : { opacity: 1, scale: 0.94 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
         >
@@ -55,7 +55,7 @@ const Hero = () => {
       <div className="relative z-30 mx-auto max-w-[1200px] pt-10 text-center sm:pt-14 lg:pt-[60px]">
         <motion.h1
           id="hero-heading"
-          initial={shouldReduceMotion ? false : { opacity: 0, y: 24 }}
+          initial={shouldReduceMotion ? false : { opacity: 1, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           className="mx-auto max-w-[935px] text-balance text-[38px] font-semibold leading-[1.2] tracking-[-0.01em] sm:text-5xl lg:text-[78px]"
@@ -64,7 +64,7 @@ const Hero = () => {
         </motion.h1>
 
         <motion.p
-          initial={shouldReduceMotion ? false : { opacity: 0, y: 16 }}
+          initial={shouldReduceMotion ? false : { opacity: 1, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.65, delay: 0.15, ease: "easeOut" }}
           className="mx-auto mt-6 max-w-[700px] text-sm leading-6 text-[#e5e6e8] sm:text-[15px] lg:mt-[54px] lg:max-w-none lg:text-[18px] lg:leading-[29px]"
@@ -76,7 +76,7 @@ const Hero = () => {
           action="/courses"
           method="get"
           role="search"
-          initial={shouldReduceMotion ? false : { opacity: 0, y: 16 }}
+          initial={shouldReduceMotion ? false : { opacity: 1, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.65, delay: 0.28, ease: "easeOut" }}
           className="mx-auto mt-10 flex max-w-[415px] flex-col gap-3 sm:max-w-[415px] sm:flex-row lg:mt-[60px] lg:max-w-[582px] lg:gap-4"
@@ -108,7 +108,7 @@ const Hero = () => {
 
       <motion.div
         aria-hidden="true"
-        initial={shouldReduceMotion ? false : { opacity: 0, x: -28 }}
+        initial={shouldReduceMotion ? false : { opacity: 1, x: -28 }}
         animate={{ opacity: 1, x: 0, ...float(8, 6, 0.5) }}
         className="absolute -left-7 top-[330px] z-10 w-[105px] sm:-left-5 sm:top-[210px] sm:w-[130px] lg:-left-1 lg:top-[127px] lg:w-[180px]"
       >
@@ -117,7 +117,7 @@ const Hero = () => {
 
       <motion.div
         aria-hidden="true"
-        initial={shouldReduceMotion ? false : { opacity: 0, scale: 0.8 }}
+        initial={shouldReduceMotion ? false : { opacity: 1, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1, ...float(6, 5.5, 0.7) }}
         className="absolute left-[9%] top-[390px] z-10 hidden w-[82px] sm:block lg:left-[calc(15%-20px)] lg:top-[373px] lg:w-[105px]"
       >
@@ -126,7 +126,7 @@ const Hero = () => {
 
       <motion.div
         aria-hidden="true"
-        initial={shouldReduceMotion ? false : { opacity: 0, x: 28 }}
+        initial={shouldReduceMotion ? false : { opacity: 1, x: 28 }}
         animate={{ opacity: 1, x: 0, ...float(10, 6.5, 0.4) }}
         className="absolute -right-10 top-[330px] z-10 w-[105px] sm:-right-8 sm:top-[205px] sm:w-[120px] lg:-right-1 lg:top-[109px] lg:w-[170px]"
       >
@@ -135,7 +135,7 @@ const Hero = () => {
 
       <motion.div
         aria-hidden="true"
-        initial={shouldReduceMotion ? false : { opacity: 0, rotate: -12, scale: 0.8 }}
+        initial={shouldReduceMotion ? false : { opacity: 1, rotate: -12, scale: 0.8 }}
         animate={{ opacity: 1, rotate: 0, scale: 1, ...float(7, 5.8, 0.8) }}
         className="absolute right-[11%] top-[385px] z-10 hidden w-[82px] sm:block lg:right-[calc(13%+18px)] lg:top-[356px] lg:w-[123px]"
       >
@@ -160,7 +160,7 @@ const Hero = () => {
 
       <div className="absolute bottom-0 left-1/2 z-20 h-[375px] w-[455px] -translate-x-1/2 sm:h-[470px] sm:w-[520px] lg:bottom-auto lg:top-[392px] lg:h-[541px] lg:w-[578px]">
         <motion.div
-          initial={shouldReduceMotion ? false : { opacity: 0, y: 42, scale: 0.96 }}
+          initial={shouldReduceMotion ? false : { opacity: 1, y: 42, scale: 0.96 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ duration: 0.9, delay: 0.35, ease: [0.22, 1, 0.36, 1] }}
           className="relative size-full"
@@ -177,7 +177,7 @@ const Hero = () => {
       </div>
 
       <motion.div
-        initial={shouldReduceMotion ? false : { opacity: 0, x: -18 }}
+        initial={shouldReduceMotion ? false : { opacity: 1, x: -18 }}
         animate={{ opacity: 1, x: 0, ...float(5, 4.5, 1.1) }}
         transition={{
           opacity: { duration: 0.5, delay: 0.72 },
@@ -192,7 +192,7 @@ const Hero = () => {
       </motion.div>
 
       <motion.div
-        initial={shouldReduceMotion ? false : { opacity: 0, x: 18 }}
+        initial={shouldReduceMotion ? false : { opacity: 1, x: 18 }}
         animate={{ opacity: 1, x: 0, ...float(6, 5, 1.3) }}
         transition={{
           opacity: { duration: 0.5, delay: 0.82 },
@@ -213,7 +213,7 @@ const Hero = () => {
       </motion.div>
 
       <motion.div
-        initial={shouldReduceMotion ? false : { opacity: 0, x: -18 }}
+        initial={shouldReduceMotion ? false : { opacity: 1, x: -18 }}
         animate={{ opacity: 1, x: 0, ...float(5, 5.2, 1.5) }}
         transition={{
           opacity: { duration: 0.5, delay: 0.92 },

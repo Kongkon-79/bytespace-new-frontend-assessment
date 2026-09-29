@@ -30,7 +30,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <header className="relative z-50 bg-[#063ee3] bg-[linear-gradient(to_right,rgba(255,255,255,0.10)_1px,transparent_1px)] [background-size:85px_100%]">
+    <header className="sticky top-0 z-50 bg-[#003be2] bg-[linear-gradient(to_right,rgba(255,255,255,0.13)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.13)_1px,transparent_1px)] [background-size:86px_86px] lg:[background-size:120px_120px]">
       <div className="container flex h-[72px] items-center justify-between md:h-[88px]">
         <Link
           href="/"
@@ -108,7 +108,7 @@ const Navbar = () => {
 
       <div
         id="mobile-navigation"
-        className={`absolute inset-x-0 top-full overflow-hidden border-t border-white/10 bg-[#063ee3] shadow-xl transition-[max-height,opacity] duration-300 md:hidden ${
+        className={`absolute inset-x-0 top-full overflow-hidden border-t border-white/10 bg-[#003be2] shadow-xl transition-[max-height,opacity] duration-300 md:hidden ${
           isMenuOpen ? "max-h-[420px] opacity-100" : "pointer-events-none max-h-0 opacity-0"
         }`}
       >
