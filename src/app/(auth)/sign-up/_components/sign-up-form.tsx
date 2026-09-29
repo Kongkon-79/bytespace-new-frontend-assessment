@@ -1,9 +1,6 @@
-import React from 'react'
-
-const SignUpForm = () => {
-  return (
-    <div>SignUpForm</div>
-  )
-}
-
-export default SignUpForm
+import Link from "next/link";
+import { AuthPageLayout } from "../../_components/auth-page-layout";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+const SignUpForm = () => <AuthPageLayout showcaseTitle="Sign up and come in" showcaseDescription="The registration process is straightforward, uncomplicated, and efficient, allowing users to sign up quickly, easily, and at no cost."><form className="w-full max-w-[410px]" aria-label="Create an account"><p className="text-sm text-secondary">Create an Account</p><h1 className="mt-1 text-4xl font-bold leading-[1.08] tracking-tight text-[#24242b] min-[1280px]:text-5xl">Welcome to<br />ByteSpace</h1><div className="mt-8 space-y-5 min-[1280px]:mt-10 min-[1280px]:space-y-6"><label className="block text-xs font-medium text-[#24242b] min-[1280px]:text-sm">Full Name<Input name="name" autoComplete="name" placeholder="Jamie Davis" className="mt-2 h-11 rounded-xl border-slate-200 px-4 text-sm shadow-none min-[1280px]:h-13" /></label><label className="block text-xs font-medium text-[#24242b] min-[1280px]:text-sm">Email<Input name="email" type="email" autoComplete="email" placeholder="designer@example.com" className="mt-2 h-11 rounded-xl border-slate-200 px-4 text-sm shadow-none min-[1280px]:h-13" /></label><label className="block text-xs font-medium text-[#24242b] min-[1280px]:text-sm">Password<Input name="password" type="password" autoComplete="new-password" placeholder="********" className="mt-2 h-11 rounded-xl border-slate-200 px-4 text-sm shadow-none min-[1280px]:h-13" /></label></div><div className="mt-5 flex justify-end min-[1280px]:mt-7"><Button type="submit" className="h-10 rounded-full bg-primary px-6 text-sm font-medium hover:bg-primary-hover min-[1280px]:h-12 min-[1280px]:px-8">Continue</Button></div><p className="mt-20 text-center text-xs text-slate-500 min-[1280px]:mt-24">Already have an account? <Link href="/login" className="text-secondary hover:underline">Login</Link></p></form></AuthPageLayout>;
+export default SignUpForm;
