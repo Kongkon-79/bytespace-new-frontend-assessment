@@ -1,9 +1,7 @@
-import React from 'react'
-
-const LoginForm = () => {
-  return (
-    <div>LoginForm</div>
-  )
-}
-
-export default LoginForm
+import Link from "next/link";
+import { FaFacebookF, FaGoogle } from "react-icons/fa6";
+import { AuthPageLayout } from "../../_components/auth-page-layout";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+const LoginForm = () => <AuthPageLayout showcaseTitle="Sign in with ease" showcaseDescription="Experience a seamless and efficient sign-in process that grants you instant access to a world of knowledge."><form className="w-full max-w-[410px]" aria-label="Sign in"><p className="text-sm text-secondary">Sign In</p><h1 className="mt-1 text-4xl font-bold leading-[1.08] tracking-tight text-[#24242b]">Welcome Back</h1><div className="mt-8 space-y-5"><label className="block text-xs font-medium text-[#24242b]">Email<Input name="email" type="email" autoComplete="email" placeholder="designer@example.com" className="mt-2 h-11 rounded-xl border-slate-200 px-4 text-sm shadow-none" /></label><label className="block text-xs font-medium text-[#24242b]">Password<Input name="password" type="password" autoComplete="current-password" placeholder="********" className="mt-2 h-11 rounded-xl border-slate-200 px-4 text-sm shadow-none" /></label></div><div className="mt-5 flex justify-end"><Button type="submit" className="h-10 rounded-full bg-primary px-6 text-sm font-medium hover:bg-primary-hover">Sign In</Button></div><div className="mt-12 flex items-center gap-3 text-xs text-slate-400"><span className="h-px flex-1 bg-slate-200" />or<span className="h-px flex-1 bg-slate-200" /></div><div className="mt-8 flex justify-center gap-3"><Button type="button" variant="outline" size="icon" aria-label="Continue with Facebook" className="size-[52px] rounded-2xl border-slate-200"><FaFacebookF className="size-5" /></Button><Button type="button" variant="outline" size="icon" aria-label="Continue with Google" className="size-[52px] rounded-2xl border-slate-200"><FaGoogle className="size-5" /></Button></div><p className="mt-14 text-center text-xs text-slate-500">New user? <Link href="/sign-up" className="text-secondary hover:underline">Create an account</Link></p></form></AuthPageLayout>;
+export default LoginForm;
