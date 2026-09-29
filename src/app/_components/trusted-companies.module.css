@@ -1,0 +1,65 @@
+.viewport {
+  position: relative;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 7%, #000 93%, transparent);
+  mask-image: linear-gradient(to right, transparent, #000 7%, #000 93%, transparent);
+}
+
+.track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  animation: trusted-companies-scroll 24s linear infinite;
+}
+
+.viewport:hover .track {
+  animation-play-state: paused;
+}
+
+.group {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: clamp(3.5rem, 7vw, 7rem);
+  padding-right: clamp(3.5rem, 7vw, 7rem);
+}
+
+.logo {
+  width: clamp(8.25rem, 12vw, 10.5rem);
+  height: auto;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+@keyframes trusted-companies-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .viewport {
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    scroll-snap-type: inline mandatory;
+    scrollbar-width: thin;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+
+  .track {
+    animation: none;
+  }
+
+  .group:first-child .logo {
+    scroll-snap-align: center;
+  }
+
+  .duplicate {
+    display: none;
+  }
+}
