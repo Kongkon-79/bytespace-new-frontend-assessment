@@ -13,10 +13,16 @@ body{
   @apply bg-white font-satoshi;
 }
 
+.secondary_color{
+  @apply text-[#003BE2]
+}
+
 
 @layer base {
   :root {
-    /* Primary Base (#D4FB20) */
+    /* =========================
+       Primary Base (#D4FB20)
+    ========================== */
     --primary: 68 96% 55%;
     --primary-foreground: 0 0% 0%;
 
@@ -26,12 +32,32 @@ body{
     --primary-dark: 68 80% 45%;
     --primary-darker: 68 75% 35%;
 
-    /* Hover & Ring */
+    /* Primary Hover */
     --primary-hover: 68 90% 48%;
+
+
+    /* =========================
+       Secondary Base (#003BE2)
+    ========================== */
+    --secondary: 224 100% 44%;
+    --secondary-foreground: 0 0% 100%;
+
+    /* Secondary Shades */
+    --secondary-light: 224 100% 55%;
+    --secondary-lighter: 224 100% 68%;
+    --secondary-dark: 224 100% 36%;
+    --secondary-darker: 224 100% 28%;
+
+    /* Secondary Hover */
+    --secondary-hover: 224 100% 38%;
+
+
+    /* Ring */
     --ring: 68 96% 55%;
   }
 
   .dark {
+    /* Primary */
     --primary: 68 96% 55%;
     --primary-foreground: 0 0% 0%;
 
@@ -39,8 +65,19 @@ body{
     --primary-lighter: 68 96% 75%;
     --primary-dark: 68 80% 45%;
     --primary-darker: 68 75% 35%;
-
     --primary-hover: 68 90% 48%;
+
+
+    /* Secondary */
+    --secondary: 224 100% 44%;
+    --secondary-foreground: 0 0% 100%;
+
+    --secondary-light: 224 100% 55%;
+    --secondary-lighter: 224 100% 68%;
+    --secondary-dark: 224 100% 36%;
+    --secondary-darker: 224 100% 28%;
+    --secondary-hover: 224 100% 38%;
+
     --ring: 68 96% 55%;
   }
 }

@@ -1,9 +1,22 @@
 import React from 'react'
+import DisCoverYourPassion from './_components/discover-your-passion'
+import ExploreDiverseLearning from './_components/explore-diverse-learning'
+import TrustedCompanies from './_components/trusted-companies'
+import DiscoverWhatOur from './_components/discover-what-our'
+import Hero from './_components/hero'
+import ProfessionalGrowth from './_components/professional-growth'
+import UnlockYourPotential from './_components/unlock-your-potential'
 
 const HomePage = () => {
   return (
     <div >
-      Home Page
+      <Hero/>
+      <TrustedCompanies/>
+      <DisCoverYourPassion/>
+      <ExploreDiverseLearning/>
+      <ProfessionalGrowth/>
+      <UnlockYourPotential/>
+      <DiscoverWhatOur/>
     </div>
   )
 }
