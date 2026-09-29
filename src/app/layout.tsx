@@ -3,8 +3,8 @@ import "./globals.css";
 
 import localFont from "next/font/local";
 import { Poppins } from "next/font/google";
-// import Navbar from "@/components/shared/Navbar/Navbar";
-// import Footer from "@/components/shared/Footer/Footer";
+import SmoothScrollProvider from "@/components/providers/SmoothScrollProvider";
+import ScrollToTopComponent from "@/components/providers/ScrollToTop";
 
 const satoshi = localFont({
   src: [
@@ -53,9 +53,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${satoshi.variable} ${poppins.variable}`}>
-        {/* <Navbar /> */}
+        <SmoothScrollProvider>
         {children}
-        {/* <Footer /> */}
+        <ScrollToTopComponent/>
+        </SmoothScrollProvider>
       </body>
     </html>
   );

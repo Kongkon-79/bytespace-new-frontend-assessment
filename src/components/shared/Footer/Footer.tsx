@@ -6,32 +6,32 @@ import { Input } from "@/components/ui/input";
 
 const footerLinks = [
   [
-    { label: "Featured Courses", href: "/courses" },
-    { label: "Featured Categories", href: "/categories" },
-    { label: "Business", href: "/courses?category=business" },
-    { label: "IT", href: "/courses?category=it" },
-    { label: "Design", href: "/courses?category=design" },
+    { label: "Featured Courses", href: "#" },
+    { label: "Featured Categories", href: "#" },
+    { label: "Business", href: "#" },
+    { label: "IT", href: "#" },
+    { label: "Design", href: "#" },
   ],
   [
-    { label: "Development", href: "/courses?category=development" },
-    { label: "Marketing", href: "/courses?category=marketing" },
-    { label: "Photography", href: "/courses?category=photography" },
-    { label: "Finance", href: "/courses?category=finance" },
-    { label: "Sport", href: "/courses?category=sport" },
+    { label: "Development", href: "#" },
+    { label: "Marketing", href: "#" },
+    { label: "Photography", href: "#" },
+    { label: "Finance", href: "#" },
+    { label: "Sport", href: "#" },
   ],
   [
-    { label: "Become a Creator", href: "/creators" },
-    { label: "Affiliate Program", href: "/affiliate" },
-    { label: "Contact", href: "/contact" },
-    { label: "Help", href: "/help" },
-    { label: "About", href: "/about" },
+    { label: "Become a Creator", href: "#" },
+    { label: "Affiliate Program", href: "#" },
+    { label: "Contact", href: "#" },
+    { label: "Help", href: "#" },
+    { label: "About", href: "#" },
   ],
 ];
 
 const legalLinks = [
-  { label: "Privacy Policy", href: "/privacy-policy" },
-  { label: "Terms of Service", href: "/terms-of-service" },
-  { label: "Cookies Settings", href: "/cookie-settings" },
+  { label: "Privacy Policy", href: "#" },
+  { label: "Terms of Service", href: "#" },
+  { label: "Cookies Settings", href: "#" },
 ];
 
 const Footer = () => {
@@ -41,7 +41,7 @@ const Footer = () => {
         <div className="grid gap-12 sm:grid-cols-2 sm:gap-x-10 lg:grid-cols-[2.2fr_repeat(3,1fr)] lg:gap-x-16 lg:gap-y-0">
           <section aria-labelledby="newsletter-heading" className="sm:col-span-2 lg:col-span-1">
             <Link
-              href="/"
+              href="#"
               aria-label="ByteSpace home"
               className="inline-flex rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-4"
             >
@@ -84,7 +84,7 @@ const Footer = () => {
 
             <p className="mt-6 max-w-[475px] text-[11px] leading-[1.55] text-[#555555]">
               By subscribing, you agree to our{" "}
-              <Link href="/privacy-policy" className="underline-offset-2 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary">
+              <Link href="#" className="underline-offset-2 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary">
                 Privacy Policy
               </Link>{" "}
               and consent to receive updates from our company.
