@@ -9,7 +9,7 @@ import UnlockYourPotential from './_components/unlock-your-potential'
 
 const HomePage = () => {
   return (
-    <div >
+    <main className="overflow-x-clip">
       <Hero/>
       <TrustedCompanies/>
       <DisCoverYourPassion/>
@@ -17,7 +17,7 @@ const HomePage = () => {
       <ProfessionalGrowth/>
       <UnlockYourPotential/>
       <DiscoverWhatOur/>
-    </div>
+    </main>
   )
 }
 

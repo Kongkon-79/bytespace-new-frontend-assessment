@@ -102,10 +102,10 @@ export default function ProfessionalGrowth() {
   return (
     <section
       aria-labelledby="professional-growth-heading"
-      className="relative overflow-hidden bg-[radial-gradient(circle_at_12%_4%,rgba(216,251,32,.48),transparent_25%),radial-gradient(circle_at_7%_96%,rgba(216,251,32,.55),transparent_22%),radial-gradient(circle_at_96%_88%,rgba(0,59,226,.18),transparent_25%),linear-gradient(135deg,#f8f9ff,#fff_48%,#f7f8fc)] px-5 py-16 sm:px-8 sm:py-20 md:py-12 lg:py-[90px]"
+      className="relative overflow-hidden bg-[radial-gradient(circle_at_12%_4%,rgba(216,251,32,.48),transparent_25%),radial-gradient(circle_at_7%_96%,rgba(216,251,32,.55),transparent_22%),radial-gradient(circle_at_96%_88%,rgba(0,59,226,.18),transparent_25%),linear-gradient(135deg,#f8f9ff,#fff_48%,#f7f8fc)] px-5 py-12 sm:px-8 sm:py-20 lg:py-[90px]"
     >
       <div className="container lg:px-0">
-        <div className="grid items-center gap-12 md:grid-cols-2 md:gap-8 lg:flex lg:items-center lg:justify-between lg:gap-0">
+        <div className="grid items-center gap-10 sm:gap-14 lg:flex lg:items-center lg:justify-between lg:gap-0">
           <motion.div
             initial={reduced ? false : "hidden"}
             whileInView="visible"
@@ -116,18 +116,18 @@ export default function ProfessionalGrowth() {
           >
             <h3
               id="professional-growth-heading"
-              className="text-balance text-[34px] font-semibold leading-[1.08] tracking-[-.035em] text-[#242528] sm:text-[42px] md:text-[30px] lg:text-[42px]"
+              className="text-balance text-[30px] font-semibold leading-[1.12] tracking-[-.035em] text-[#242528] sm:text-[42px] sm:leading-[1.08] lg:text-[42px]"
             >
               Your Path to Professional Growth Starts Here!
             </h3>
-            <p className="mt-7 max-w-[492px] text-[15px] leading-[1.7] text-[#5d616a] sm:text-base md:mt-5 md:text-[12px] lg:mt-7 lg:text-base">
+            <p className="mt-5 max-w-[492px] text-sm leading-[1.7] text-[#5d616a] sm:mt-7 sm:text-base lg:text-base">
               Explore our curated selection of courses tailored to enhance your
               capabilities and accelerate your career journey. Whether you are
               looking to sharpen specific skills, gain industry expertise, or
               embark on a new career path entirely, we have the resources you
               need.
             </p>
-            <dl className="mt-9 flex gap-9 sm:gap-14">
+            <dl className="mt-8 flex max-w-[300px] justify-between gap-5 sm:mt-9 sm:max-w-none sm:justify-start sm:gap-14">
               {[
                 ["12K", "Students"],
                 ["70+", "Courses"],
@@ -145,7 +145,7 @@ export default function ProfessionalGrowth() {
             </dl>
           </motion.div>
 
-          <div className="relative mx-auto h-[430px] w-full max-w-[570px] sm:h-[500px] md:h-[375px] md:max-w-none lg:mx-0 lg:h-[575px] lg:w-[612px] lg:max-w-none">
+          <div className="relative mx-auto h-[390px] w-full max-w-[570px] sm:h-[500px] lg:mx-0 lg:h-[575px] lg:w-[612px] lg:max-w-none">
             <motion.div
               initial={reduced ? false : { opacity: 1, scale: 0.94, y: 28 }}
               whileInView={{ opacity: 1, scale: 1, y: 0 }}
@@ -271,7 +271,7 @@ export default function ProfessionalGrowth() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.75, delay: 0.15 }}
-              className="absolute bottom-[-12px] left-[23%] z-20 w-[280px] sm:bottom-[-42px] sm:left-[21%] sm:w-[370px] md:bottom-[24%] md:left-[12%] md:w-[76%] lg:left-[18px] lg:top-[5px] lg:w-[620px]"
+              className="absolute bottom-[-8px] left-1/2 z-20 w-[82vw] max-w-[300px] -translate-x-1/2 sm:bottom-[-42px] sm:left-[21%] sm:w-[370px] sm:max-w-none sm:translate-x-0 md:bottom-[24%] md:left-[12%] md:w-[76%] lg:left-[18px] lg:top-[5px] lg:w-[620px]"
             >
               <Image
                 src="/images/professional_growth_right.png"
@@ -284,14 +284,14 @@ export default function ProfessionalGrowth() {
           </div>
         </div>
 
-        <div className="mt-12 grid items-center gap-12 lg:mt-4 lg:flex lg:items-center lg:justify-between lg:gap-0">
-          <div className="relative order-2 mx-auto h-[405px] w-full max-w-[510px] lg:order-1 lg:mx-0 lg:h-[575px] lg:w-[612px] lg:max-w-none">
+        <div className="mt-10 grid items-center gap-10 sm:mt-12 sm:gap-14 lg:mt-4 lg:flex lg:items-center lg:justify-between lg:gap-0">
+          <div className="relative order-2 mx-auto h-[385px] w-full max-w-[510px] sm:h-[405px] lg:order-1 lg:mx-0 lg:h-[575px] lg:w-[612px] lg:max-w-none">
             <motion.div
               initial={reduced ? false : { opacity: 1, x: -28 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7 }}
-              className="absolute bottom-[-18px] left-[18%] h-[396px] w-[320px] sm:left-[23%] sm:h-[460px] sm:w-[375px] lg:bottom-auto lg:left-[73px] lg:top-[20px] lg:h-auto lg:w-[470px]"
+              className="absolute bottom-[-10px] left-1/2 z-20 h-auto w-[82vw] max-w-[300px] -translate-x-1/2 sm:bottom-[-18px] sm:left-[23%] sm:h-[460px] sm:w-[375px] sm:max-w-none sm:translate-x-0 lg:bottom-auto lg:left-[73px] lg:top-[20px] lg:h-auto lg:w-[470px]"
             >
               <Image
                 src="/images/professional_growth_left.png"
@@ -317,7 +317,7 @@ export default function ProfessionalGrowth() {
               initial={reduced ? false : { opacity: 1, x: -20 }}
               whileInView={{ opacity: 1, x: 0, ...float(5, 5, 1) }}
               viewport={{ once: true }}
-              className="absolute left-0 top-[35px] z-30 w-[126px] rounded-xl bg-[#003be2] p-3 text-white shadow-[0_14px_26px_rgba(0,59,226,.24)] sm:left-[2%] sm:top-[30px] sm:w-[150px] lg:left-[90px] lg:top-[34px] lg:w-[224px] lg:p-4"
+              className="absolute left-0 top-[35px] z-10 w-[126px] rounded-xl bg-[#003be2] p-3 text-white shadow-[0_14px_26px_rgba(0,59,226,.24)] sm:left-[2%] sm:top-[30px] sm:w-[150px] lg:left-[90px] lg:top-[34px] lg:w-[224px] lg:p-4"
             >
               <p className="text-[10px] font-medium">Total Revenue</p>
               <p className="text-[8px] text-white/75">July 1-28</p>
@@ -340,7 +340,7 @@ export default function ProfessionalGrowth() {
               initial={reduced ? false : { opacity: 1, x: -20 }}
               whileInView={{ opacity: 1, x: 0, ...float(6, 5.4, 1.3) }}
               viewport={{ once: true }}
-              className="absolute left-0 top-[139px] z-30 w-[105px] rounded-xl bg-[#003be2] p-3 text-white shadow-[0_14px_26px_rgba(0,59,226,.24)] sm:left-[2%] sm:top-[140px] sm:w-[123px] lg:left-[90px] lg:top-[170px] lg:w-[123px]"
+              className="absolute left-0 top-[139px] z-10 w-[105px] rounded-xl bg-[#003be2] p-3 text-white shadow-[0_14px_26px_rgba(0,59,226,.24)] sm:left-[2%] sm:top-[140px] sm:w-[123px] lg:left-[90px] lg:top-[170px] lg:w-[123px]"
             >
               <p className="text-[9px] font-medium">Year To Date</p>
               <p className="text-[8px] text-white/75">2023</p>
@@ -359,14 +359,14 @@ export default function ProfessionalGrowth() {
             transition={{ duration: 0.65 }}
             className="order-1 max-w-[510px] lg:order-2"
           >
-            <h3 className="text-balance text-[34px] font-semibold leading-[1.08] tracking-[-.035em] text-[#242528] sm:text-[42px] lg:text-[44px]">
+            <h3 className="text-balance text-[30px] font-semibold leading-[1.12] tracking-[-.035em] text-[#242528] sm:text-[42px] sm:leading-[1.08] lg:text-[44px]">
               Create &amp; Manage Courses Easily.
             </h3>
-            <p className="mt-7 text-[15px] leading-[1.7] text-[#5d616a] sm:text-base">
+            <p className="mt-5 text-sm leading-[1.7] text-[#5d616a] sm:mt-7 sm:text-base">
               ByteSpace supports individuals or entities in the creation,
               publication, and administration of educational courses.
             </p>
-            <ul className="mt-8 space-y-3 text-sm text-[#30333a] sm:text-base">
+            <ul className="mt-6 space-y-2.5 text-sm text-[#30333a] sm:mt-8 sm:space-y-3 sm:text-base">
               {[
                 "Share Your Expertise",
                 "Monetize Your Passion",

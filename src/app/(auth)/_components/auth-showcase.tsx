@@ -35,17 +35,17 @@ function MiniCourseCard({ course, className }: { course: Course; className: stri
 
 export function AuthShowcase({ title, description }: AuthShowcaseProps) {
   return (
-    <aside className="relative hidden min-h-[610px] overflow-hidden px-[max(2rem,calc((100%_-_345px)_/_2))] py-7 text-white md:block lg:min-h-[100dvh] lg:px-[88px] min-[1280px]:px-[clamp(7rem,9vw,10rem)] min-[1280px]:py-[clamp(2rem,4vh,3.5rem)]">
-      <div className="relative z-10 w-[345px] min-[1280px]:scale-[1.18] min-[1280px]:origin-top-left">
+    <aside className="relative hidden min-h-[100dvh] overflow-hidden px-[88px] py-7 text-white lg:block xl:px-[clamp(5.5rem,8vw,8rem)]">
+      <div className="relative z-10 w-[345px] xl:origin-top-left xl:scale-110 2xl:scale-[1.15]">
         <Link href="/" aria-label="Go to ByteSpace home" className="inline-flex rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-secondary">
           <Image src="/images/auth_logo.png" alt="ByteSpace" width={29} height={32} className="h-auto w-5" priority />
         </Link>
         <div className="mt-9 w-[330px]"><h2 className="text-base font-bold">{title}</h2><p className="mt-2 text-[13px] leading-5 text-white/90">{description}</p></div>
-        <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.55, ease: "easeOut" }} className="relative mt-[63px] h-[400px] w-[345px] origin-top-left lg:scale-[1.12] min-[1280px]:scale-[1.18]">
-          <motion.div animate={{ y: [0, -5, 0] }} transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }} className="absolute inset-0">
+        <motion.div initial={false} animate={{ y: [0, -5, 0] }} transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }} className="absolute left-0 top-[192px] h-[400px] w-[345px]">
+          <div className="absolute inset-0">
             <MiniCourseCard course={displayCourses[0]} className="left-0 top-16 z-10 w-[255px]" />
             <MiniCourseCard course={displayCourses[1]} className="left-20 top-0 z-20 w-[265px] shadow-[0_12px_28px_rgba(0,19,82,0.22)]" />
-          </motion.div>
+          </div>
           <motion.div animate={{ rotate: [0, 3, 0] }} transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }} className="absolute left-[35px] top-[27px] z-30"><Image src="/images/auth_top_left_shape.png" alt="" width={148} height={147} className="w-[72px]" /></motion.div>
           <motion.div animate={{ y: [0, -4, 0] }} transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut" }} className="absolute bottom-0 left-0 z-30"><Image src="/images/auth_bottom_left_shape.png" alt="" width={190} height={189} className="w-[91px]" /></motion.div>
           <motion.div animate={{ rotate: [0, 2, 0] }} transition={{ duration: 4.2, repeat: Infinity, ease: "easeInOut" }} className="absolute left-[267px] top-[251px] z-30"><Image src="/images/auth_bottom_right_shape.png" alt="" width={177} height={176} className="w-[100px]" /></motion.div>
