@@ -56,14 +56,14 @@ const DisCoverYourPassion = () => {
         );
 
   return (
-    <section aria-labelledby="discover-heading" className="bg-white px-5 pb-10 pt-14 sm:px-8 sm:pb-14 sm:pt-16 lg:pb-16 lg:pt-20">
+    <section aria-labelledby="discover-heading" className="bg-white px-5 pb-10  sm:px-8 py-14 md:py-16 lg:py-[72px]">
       <div className="container">
         <header className="mx-auto max-w-[900px] text-center">
-          <h1 id="discover-heading" className="text-balance text-3xl font-bold leading-[1.12] tracking-[-0.03em] text-[#101222] sm:text-4xl lg:text-[40px]">
+          <h2 id="discover-heading" className="text-balance font-semibold tracking-[-0.03em] leading-[120%] text-black text-2xl sm:text-3xl md:text-4xl lg:text-[44px]">
             Discover Your Passion,
-            <span className="block">Build Your Skills</span>
-          </h1>
-          <p className="mx-auto mt-5 max-w-[820px] text-sm leading-6 text-[#8a8c95] sm:text-[15px]">
+            <span className="block mt-1">Build Your Skills</span>
+          </h2>
+          <p className="mx-auto mt-4 max-w-[820px] leading-[160%] font-normal text-[#82868E] text-sm md:text-base">
             At Bytespace Courses, we bring you closer to life-changing knowledge. Explore a variety of courses across different fields, from technology to the arts, and make a difference in your career and life.
           </p>
         </header>
@@ -78,10 +78,10 @@ const DisCoverYourPassion = () => {
                 type="button"
                 aria-pressed={isActive}
                 onClick={() => setActiveCategory(category)}
-                className={`rounded-full px-4 py-2 text-xs font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2 sm:px-[18px] sm:text-[13px] ${
+                className={`rounded-full px-4 py-2  font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2 sm:px-[18px] text-xs md:text-sm lg:text-base ${
                   isActive
-                    ? "bg-primary text-black"
-                    : "bg-[#f5f5f6] text-[#555861] hover:bg-[#e9e9ec] hover:text-[#151720]"
+                    ? "bg-primary text-[#242528]"
+                    : "bg-[#F5F5F6] text-[#4B4C53] hover:bg-[#e9e9ec] hover:text-[#151720]"
                 }`}
               >
                 {category}
@@ -92,16 +92,16 @@ const DisCoverYourPassion = () => {
             type="button"
             aria-expanded={showMore}
             onClick={() => setShowMore((expanded) => !expanded)}
-            className="rounded-full px-2 py-2 text-xs font-semibold text-[#0047ff] transition-colors hover:text-secondary-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary sm:text-[13px]"
+            className="rounded-full px-2 py-2 font-medium leading-[120%] text-secondary transition-colors hover:text-secondary-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary text-sm md:text-base"
           >
             {showMore ? "− Less" : "+ More"}
           </button>
         </nav>
 
-        {visibleCourses.length > 0 ? (
-          <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:mt-[72px] lg:grid-cols-3 lg:gap-8">
-            {visibleCourses.map((course) => (
-              <CourseCard key={course.id} course={course} />
+        {visibleCourses?.length > 0 ? (
+          <div className="grid grid-cols-1 gap-6 md:gap-8 lg:gap-9 xl:gap-10 sm:grid-cols-2 mt-14 md:mt-16 lg:mt-[77px] lg:grid-cols-3 ">
+            {visibleCourses?.map((course) => (
+              <CourseCard key={course?.id} course={course} />
             ))}
           </div>
         ) : (
