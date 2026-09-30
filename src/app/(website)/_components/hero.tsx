@@ -68,7 +68,7 @@ const Hero = () => {
         </motion.div>
       </div>
 
-      <div className="relative z-30 mx-auto max-w-[1200px] pt-10 text-center sm:pt-14 lg:pt-[60px]">
+      <div className="container relative z-30 pt-10 text-center sm:pt-14 lg:pt-[60px]">
         <motion.h1
           id="hero-heading"
           initial={shouldReduceMotion ? false : { opacity: 1, y: 24 }}

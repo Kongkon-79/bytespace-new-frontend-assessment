@@ -13,7 +13,7 @@ const learningPaths = [
 const ExploreDiverseLearning = () => {
   return (
     <section aria-labelledby="learning-paths-heading" className="bg-white px-5 pb-20 pt-8 sm:px-8 sm:pb-24 sm:pt-10 lg:pb-28 lg:pt-12">
-      <div className="mx-auto max-w-[1200px]">
+      <div className="container">
         <header className="mx-auto max-w-[930px] text-center">
           <h2 id="learning-paths-heading" className="text-balance text-2xl font-bold tracking-[-0.025em] text-[#101222] sm:text-3xl lg:text-[32px]">
             Explore Diverse Learning Paths at Bytespace

@@ -31,7 +31,7 @@ const Navbar = () => {
 
   return (
     <header className="sticky top-0 z-50 bg-[#003be2] bg-[linear-gradient(to_right,rgba(255,255,255,0.13)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.13)_1px,transparent_1px)] [background-size:86px_86px] lg:[background-size:120px_120px]">
-      <div className="container flex h-[60px] items-center justify-between md:h-[72px]">
+      <div className="container flex h-[63px] items-center justify-between md:h-[75px]">
         <Link
           href="/"
           aria-label="ByteSpace home"

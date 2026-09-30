@@ -13,6 +13,10 @@ body{
   @apply bg-white font-satoshi;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  @apply font-poppins;
+}
+
 .secondary_color{
   @apply text-[#003BE2]
 }
@@ -20,8 +24,8 @@ body{
 
 @layer base {
   :root {
+    --font-poppins: var(--font-satoshi);
     /* =========================
-       Primary Base (#D4FB20)
     ========================== */
     --primary: 68 96% 55%;
     --primary-foreground: 0 0% 0%;
