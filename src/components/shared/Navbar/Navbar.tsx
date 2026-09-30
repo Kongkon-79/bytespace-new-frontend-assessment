@@ -3,8 +3,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, ShoppingBag, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
+import { GrShop } from "react-icons/gr";
 
 const navigation = [
   { label: "Home", href: "/" },
@@ -47,19 +48,22 @@ const Navbar = () => {
           />
         </Link>
 
-        <nav aria-label="Primary navigation" className="hidden items-center gap-8 md:flex lg:gap-10">
+        <nav
+          aria-label="Primary navigation"
+          className="hidden items-center gap-8 md:flex lg:gap-10"
+        >
           {navigation.map((item) => {
             const isActive =
-              item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);
+              item.href === "/"
+                ? pathname === "/"
+                : pathname.startsWith(item.href);
 
             return (
               <Link
                 key={item.href}
                 href={item.href}
                 aria-current={isActive ? "page" : undefined}
-                className={`relative rounded-sm py-2 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary ${
-                  isActive ? "text-white" : "text-white/80 hover:text-white"
-                }`}
+                className={`relative rounded-sm py-2 text-sm lg:text-base transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary leading-[120%] text-[#F5F5F6] hover:text-white ${isActive ? "font-medium" : "font-normal"}`}
               >
                 {item.label}
                 <span
@@ -75,13 +79,13 @@ const Navbar = () => {
         <div className="hidden items-center gap-5 md:flex lg:gap-6">
           <Link
             href="/login"
-            className="rounded-sm py-2 text-sm font-medium text-white/85 transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+            className="rounded-sm py-2 text-sm lg:text-base font-normal leading-[24px] text-[#F5F5F6] transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
           >
             Sign In
           </Link>
           <Link
             href="/sign-up"
-            className="rounded-sm py-2 text-sm font-medium text-white/85 transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+            className="rounded-sm py-2 text-sm lg:text-base font-normal leading-[24px] text-[#F5F5F6] transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
           >
             Join Us
           </Link>
@@ -90,39 +94,52 @@ const Navbar = () => {
             aria-label="View shopping cart"
             className="flex size-10 items-center justify-center rounded-full text-white transition-colors hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
           >
-            <ShoppingBag aria-hidden="true" size={19} strokeWidth={1.8} />
+            <GrShop className="text-[#F5F5F6] w-6 h-6" />
           </Link>
         </div>
 
         <button
           type="button"
-          aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+          aria-label={
+            isMenuOpen ? "Close navigation menu" : "Open navigation menu"
+          }
           aria-expanded={isMenuOpen}
           aria-controls="mobile-navigation"
           onClick={() => setIsMenuOpen((open) => !open)}
           className="flex size-11 items-center justify-center rounded-full text-white transition-colors hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary md:hidden"
         >
-          {isMenuOpen ? <X aria-hidden="true" size={24} /> : <Menu aria-hidden="true" size={25} />}
+          {isMenuOpen ? (
+            <X aria-hidden="true" size={24} />
+          ) : (
+            <Menu aria-hidden="true" size={25} />
+          )}
         </button>
       </div>
 
       <div
         id="mobile-navigation"
         className={`absolute inset-x-0 top-full overflow-hidden border-t border-white/10 bg-[#003be2] shadow-xl transition-[max-height,opacity] duration-300 md:hidden ${
-          isMenuOpen ? "max-h-[420px] opacity-100" : "pointer-events-none max-h-0 opacity-0"
+          isMenuOpen
+            ? "max-h-[420px] opacity-100"
+            : "pointer-events-none max-h-0 opacity-0"
         }`}
       >
-        <nav aria-label="Mobile navigation" className="container flex flex-col py-4">
+        <nav
+          aria-label="Mobile navigation"
+          className="container flex flex-col py-4"
+        >
           {navigation.map((item) => {
             const isActive =
-              item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);
+              item.href === "/"
+                ? pathname === "/"
+                : pathname.startsWith(item.href);
 
             return (
               <Link
                 key={item.href}
                 href={item.href}
                 aria-current={isActive ? "page" : undefined}
-                className={`rounded-lg px-3 py-3 text-base font-medium transition-colors hover:bg-white/10 ${
+                className={`rounded-[8px] px-3 py-3 text-base font-medium transition-colors hover:bg-white/10 ${
                   isActive ? "bg-white/10 text-primary" : "text-white"
                 }`}
               >
@@ -136,13 +153,13 @@ const Navbar = () => {
           <div className="grid grid-cols-2 gap-3">
             <Link
               href="/login"
-              className="flex min-h-11 items-center justify-center rounded-lg border border-white/30 px-4 text-sm font-semibold text-white transition-colors hover:bg-white/10"
+              className="flex min-h-11 items-center justify-center rounded-[10px] border border-white/30 px-4 text-sm font-semibold text-white transition-colors hover:bg-white/10"
             >
               Sign In
             </Link>
             <Link
               href="/sign-up"
-              className="flex min-h-11 items-center justify-center rounded-lg bg-primary px-4 text-sm font-bold text-primary-foreground transition-colors hover:bg-primary-hover"
+              className="flex min-h-11 items-center justify-center rounded-[10px] bg-primary px-4 text-sm font-bold text-primary-foreground transition-colors hover:bg-primary-hover"
             >
               Join Us
             </Link>
@@ -152,7 +169,7 @@ const Navbar = () => {
             href="/cart"
             className="mt-3 flex min-h-11 items-center justify-center gap-2 rounded-lg text-sm font-medium text-white transition-colors hover:bg-white/10"
           >
-            <ShoppingBag aria-hidden="true" size={18} />
+            <GrShop className="text-[#F5F5F6] w-6 h-6" />
             View cart
           </Link>
         </nav>

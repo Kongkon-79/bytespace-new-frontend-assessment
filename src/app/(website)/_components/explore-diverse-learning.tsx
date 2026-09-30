@@ -12,7 +12,7 @@ const learningPaths = [
 
 const ExploreDiverseLearning = () => {
   return (
-    <section aria-labelledby="learning-paths-heading" className="bg-white px-5 pb-20 pt-8 sm:px-8 sm:pb-24 sm:pt-10 lg:pb-28 lg:pt-12">
+    <section aria-labelledby="learning-paths-heading" className="bg-white px-5 sm:px-8 pb-20 md:pb-24 lg:pb-[120px]">
       <div className="container">
         <header className="mx-auto max-w-[930px] text-center">
           <h2 id="learning-paths-heading" className="text-balance text-2xl font-bold tracking-[-0.025em] text-[#101222] sm:text-3xl lg:text-[32px]">

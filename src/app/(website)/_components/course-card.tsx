@@ -26,11 +26,11 @@ const learnerAvatars = [
 
 const CourseCard = ({ course }: { course: Course }) => {
   return (
-    <article className="group flex h-full flex-col rounded-2xl border border-[#d4d6dc] bg-white p-3 transition-all duration-300 hover:-translate-y-1 hover:border-secondary/30 hover:shadow-[0_14px_35px_rgba(18,32,74,0.10)] sm:p-3.5">
+    <article className="group flex h-full flex-col rounded-[24px] border border-[#CED0D3] bg-white p-3 md:p-3.5 lg:p-4 transition-all duration-300 hover:-translate-y-1 hover:border-secondary/30 hover:shadow-[0_14px_35px_rgba(18,32,74,0.10)] ">
       <Link
         href={`/courses/${course.id}`}
         aria-label={`View ${course.title} course`}
-        className="relative block aspect-[1.75/1] overflow-hidden rounded-xl bg-slate-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2"
+        className="relative block aspect-[1.75/1] overflow-hidden rounded-[12px] bg-slate-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2"
       >
         <Image
           src={course.image}
@@ -41,47 +41,47 @@ const CourseCard = ({ course }: { course: Course }) => {
         />
 
         <div className="absolute inset-x-2 bottom-2 flex items-center justify-between gap-1 text-[8px] text-[#44474d] sm:text-[9px]">
-          <span className="inline-flex min-w-0 items-center gap-1 rounded-full bg-white/80 px-2 py-1 backdrop-blur-md">
+          <span className="inline-flex min-w-0 items-center gap-1 rounded-full bg-[#F6F6F699] px-2 py-1 backdrop-blur-[8px]">
             <BarChart3 aria-hidden="true" className="size-2.5 shrink-0" />
-            <span className="truncate">{course.lessons} Lessons</span>
+            <span className="truncate text-[#4F4F4F]">{course.lessons} Lessons</span>
           </span>
-          <span className="inline-flex min-w-0 items-center gap-1 rounded-full bg-white/80 px-2 py-1 backdrop-blur-md">
+          <span className="inline-flex min-w-0 items-center gap-1 rounded-full bg-[#F6F6F699] px-2 py-1 backdrop-blur-[8px]">
             <Clock3 aria-hidden="true" className="size-2.5 shrink-0" />
-            <span className="truncate">{course.duration}</span>
+            <span className="truncate text-[#4F4F4F]">{course.duration}</span>
           </span>
-          <span className="inline-flex min-w-0 items-center gap-1 rounded-full bg-white/80 px-2 py-1 backdrop-blur-md">
+          <span className="inline-flex min-w-0 items-center gap-1 rounded-full bg-[#F6F6F699] px-2 py-1 backdrop-blur-[8px]">
             <MessageCircle aria-hidden="true" className="size-2.5 shrink-0" />
-            <span className="truncate">{course.comments} Comments</span>
+            <span className="truncate text-[#4F4F4F]">{course.comments} Comments</span>
           </span>
         </div>
       </Link>
 
-      <div className="flex flex-1 flex-col px-0.5 pb-1 pt-4">
+      <div className="flex flex-1 flex-col px-0.5 pb-1 pt-3">
         <div className="flex items-start justify-between gap-3">
           <Link
             href={`/courses/${course.id}`}
             className="min-w-0 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary"
           >
-            <h3 className="truncate text-base font-bold leading-tight text-[#111322] transition-colors group-hover:text-secondary">
+            <h3 className="truncate text-base md:text-lg xl:text-xl font-semibold leading-[120%] text-black transition-colors group-hover:text-secondary">
               {course.title}
             </h3>
           </Link>
-          <span className="flex shrink-0 items-center gap-1 text-sm text-[#85878d]">
+          <span className="flex shrink-0 items-center gap-1 text-sm md:text-base font-normal leading-[160%] text-[#4F4F4F]">
             {course.rating}
-            <Star aria-hidden="true" className="size-3.5 fill-[#d9dadd] text-[#d9dadd]" />
+            <Star aria-hidden="true" className="size-4 fill-[#CED0D3] text-[#CED0D3]" />
           </span>
         </div>
 
-        <p className="mt-1.5 text-[10px] text-[#6b6f78]">
+        <p className="mt-1 text-[10px] lg:text-xs font-normal leading-[160%] text-[#4F4F4F]">
           by{" "}
           <Link href="/creators" className="text-secondary hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary">
             {course.instructor}
           </Link>
         </p>
 
-        <div className="mt-4 flex items-center justify-between gap-3">
-          <span className="inline-flex items-center gap-1.5 rounded-full bg-[#f5f5f6] px-3 py-1.5 text-[10px] text-[#555860]">
-            <BarChart3 aria-hidden="true" className="size-3" />
+        <div className="mt-3 flex items-center justify-between gap-3">
+          <span className="inline-flex items-center gap-1.5 rounded-full bg-[#F5F5F6] px-3 py-1.5 text-[10px] md:text-[11px] xl:text-xs font-normal leading-[120%] text-[#4B4C53]">
+            <BarChart3 aria-hidden="true" className="size-3 text-[#4B4C53]" />
             {course.level}
           </span>
 
@@ -96,15 +96,15 @@ const CourseCard = ({ course }: { course: Course }) => {
                 className={`size-7 rounded-full border-2 border-white object-cover ${index === 0 ? "" : "-ml-2"}`}
               />
             ))}
-            <span className="-ml-2 flex size-7 items-center justify-center rounded-full border-2 border-white bg-primary text-[8px] font-bold text-black">
+            <span className="-ml-2 flex size-7 items-center justify-center rounded-full border-2 border-white bg-primary text-[8px] md:text-[10px] leading-[20px] font-medium text-[#242528]">
               {course.enrolledCount}
             </span>
           </div>
         </div>
 
-        <p className="mt-4 text-lg font-bold leading-none text-[#0047ff]">
+        <p className="mt-3 text-lg lg:text-xl font-semibold leading-[120%] font-poppins text-secondary">
           ${course.price}
-          <span className="ml-0.5 text-[9px] font-normal text-[#777a82]">/lifetime</span>
+          <span className="ml-0.5 font-satoshi text-[9px] md:text-[10px] lg:text-xs font-normal text-[#4F4F4F]">/lifetime</span>
         </p>
       </div>
     </article>
