@@ -62,7 +62,7 @@ const DiscoverWhatOur = () => {
       />
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10 bg-white/20" />
 
-      <div className="mx-auto max-w-[1200px]">
+      <div className="container">
         <header className="grid items-start gap-8 md:grid-cols-[0.92fr_1.08fr] md:gap-16 lg:gap-24">
           <h2
             id="community-heading"

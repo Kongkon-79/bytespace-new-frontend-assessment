@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 import localFont from "next/font/local";
-import { Poppins } from "next/font/google";
 import SmoothScrollProvider from "@/components/providers/SmoothScrollProvider";
 import ScrollToTopComponent from "@/components/providers/ScrollToTop";
 
@@ -33,12 +32,6 @@ const satoshi = localFont({
   display: "swap",
 });
 
-const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-poppins",
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   title: "ByteSpace New",
@@ -52,7 +45,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${satoshi.variable} ${poppins.variable}`}>
+      <body className={satoshi.variable}>
         <SmoothScrollProvider>
         {children}
         <ScrollToTopComponent/>

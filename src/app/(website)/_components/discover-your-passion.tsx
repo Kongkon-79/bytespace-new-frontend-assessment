@@ -57,7 +57,7 @@ const DisCoverYourPassion = () => {
 
   return (
     <section aria-labelledby="discover-heading" className="bg-white px-5 pb-10 pt-14 sm:px-8 sm:pb-14 sm:pt-16 lg:pb-16 lg:pt-20">
-      <div className="mx-auto max-w-[1200px]">
+      <div className="container">
         <header className="mx-auto max-w-[900px] text-center">
           <h1 id="discover-heading" className="text-balance text-3xl font-bold leading-[1.12] tracking-[-0.03em] text-[#101222] sm:text-4xl lg:text-[40px]">
             Discover Your Passion,
