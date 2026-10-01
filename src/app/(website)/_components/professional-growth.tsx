@@ -102,7 +102,7 @@ export default function ProfessionalGrowth() {
   return (
     <section
       aria-labelledby="professional-growth-heading"
-      className="relative overflow-hidden bg-[radial-gradient(circle_at_12%_4%,rgba(216,251,32,.48),transparent_25%),radial-gradient(circle_at_7%_96%,rgba(216,251,32,.55),transparent_22%),radial-gradient(circle_at_96%_88%,rgba(0,59,226,.18),transparent_25%),linear-gradient(135deg,#f8f9ff,#fff_48%,#f7f8fc)] px-5 py-12 sm:px-8 sm:py-20 lg:py-[90px] "
+      className="relative overflow-hidden bg-[radial-gradient(ellipse_55%_42%_at_32%_0%,rgba(228,255,123,.56),transparent_68%),radial-gradient(ellipse_42%_38%_at_0%_100%,rgba(222,255,77,.62),transparent_72%),radial-gradient(ellipse_46%_42%_at_100%_0%,rgba(220,228,255,.7),transparent_72%),radial-gradient(ellipse_56%_42%_at_72%_100%,rgba(202,215,255,.67),transparent_72%),linear-gradient(135deg,#fbfcf8_0%,#fff_48%,#f9faff_100%)] px-5 py-12 sm:px-8 sm:py-20 lg:py-[90px] "
     >
       <div className="container lg:px-0">
         <div className="grid items-center gap-10 md:gap-12 lg:flex lg:items-center lg:justify-between lg:gap-0">
