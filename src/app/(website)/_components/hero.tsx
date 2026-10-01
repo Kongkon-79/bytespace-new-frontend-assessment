@@ -254,7 +254,7 @@ const Hero = () => {
           opacity: { duration: 0.5, delay: 0.72 },
           x: { duration: 0.5, delay: 0.72 },
         }}
-        className="absolute bottom-[230px] left-3 z-30 w-[138px] rounded-xl bg-white p-3 text-left text-[#27292f] shadow-[0_12px_30px_rgba(0,0,0,0.13)] sm:left-[calc(50%-250px)] sm:w-[150px] lg:bottom-auto lg:left-[calc(50%-315px)] lg:top-[522px] lg:w-[206px] lg:rounded-2xl lg:p-4"
+        className="absolute bottom-[230px] left-3 z-30 rounded-xl bg-white p-3 text-left text-[#27292f] shadow-[0_12px_30px_rgba(0,0,0,0.13)] sm:left-[calc(50%-250px)] w-[150px] lg:bottom-auto lg:left-[calc(50%-315px)] lg:top-[522px] lg:w-[206px] lg:rounded-2xl lg:p-4"
       >
         <p className="text-xs md:text-sm lg:text-base font-medium leading-[120%] text-[#242528]">
           UI/UX Design
@@ -300,7 +300,7 @@ const Hero = () => {
           opacity: { duration: 0.5, delay: 0.92 },
           x: { duration: 0.5, delay: 0.92 },
         }}
-        className="absolute bottom-5 left-3 z-30 w-[190px] rounded-xl bg-white p-3 text-left text-[#282a30] shadow-[0_12px_30px_rgba(0,0,0,0.13)] sm:bottom-9 sm:left-[calc(50%-285px)] lg:bottom-auto lg:left-[calc(50%-392px)] lg:top-[717px] lg:w-[258px] lg:rounded-2xl lg:p-4"
+        className="absolute bottom-5 left-3 z-30 w-[200px] rounded-xl bg-white p-3 text-left text-[#282a30] shadow-[0_12px_30px_rgba(0,0,0,0.13)] sm:bottom-9 sm:left-[calc(50%-285px)] lg:bottom-auto lg:left-[calc(50%-392px)] lg:top-[717px] lg:w-[258px] lg:rounded-2xl lg:p-4"
       >
         <p className="text-xs md:text-sm lg:text-base font-medium text-[#242528] leading-[120%]">
           Happy Students
@@ -326,10 +326,10 @@ const Hero = () => {
               alt=""
               width={43}
               height={43}
-              className={`size-7 rounded-full border-2 border-white object-cover ${index === 0 ? "" : "-ml-2"}`}
+              className={`size-6.2 md:size-7 rounded-full border-2 border-white object-cover ${index === 0 ? "" : "-ml-2"}`}
             />
           ))}
-          <span className="-ml-1.5 flex size-9 items-center justify-center rounded-full border-2 border-white bg-primary text-[10px] md:text-xs leading-[150%] font-bold text-[#242528]">
+          <span className="-ml-1.5 flex size-8 md:size-9 items-center justify-center rounded-full border-2 border-white bg-primary text-[10px] md:text-xs leading-[150%] font-bold text-[#242528]">
             2K+
           </span>
         </div>
