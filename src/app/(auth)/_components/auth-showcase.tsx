@@ -32,7 +32,7 @@ function MiniCourseCard({
           alt={course.imageAlt}
           fill
           sizes="265px"
-          className="object-cover"
+          className="object-cover opacity-90"
         />
         <div className="absolute inset-x-2 bottom-2 flex items-center justify-start gap-3 text-[7px] text-slate-700">
           <span className="inline-flex items-center gap-0.5 rounded-full bg-[#F6F6F699] text-[#4F4F4F] text-[10px] leading-[20px] font-medium px-1.5 py-1">

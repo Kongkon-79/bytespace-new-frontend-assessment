@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const NotFound = () => {
@@ -9,25 +10,29 @@ const NotFound = () => {
       />
 
       <section className="relative z-10 flex w-full flex-col items-center text-center">
-        <div className="relative w-[min(94vw,700px)]">
-          <p
+        <div className="relative w-[min(94vw,900px)]">
+          <Image
+            src="/images/404.png"
+            alt=""
             aria-hidden="true"
-            className="font-poppins bg-gradient-to-b from-[#d8fb20] via-[#c9f321] to-[#8ca8a4] bg-clip-text text-[clamp(9rem,28vw,19rem)] font-bold leading-[0.84] tracking-[-0.075em] text-transparent"
-          >
-            404
-          </p>
-          <h1 className="-mt-5 px-1 text-[clamp(1.9rem,5vw,3.5rem)] font-bold leading-[1.08] tracking-[-0.04em] text-white">
+            width={1772}
+            height={689}
+            priority
+            sizes="(max-width: 900px) 94vw, 900px"
+            className="h-auto w-full"
+          />
+          <h1 className="-mt-5 px-1 text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-semibold leading-[120%] tracking-[-0.04em] text-white">
             <span className="block">The page you are looking</span>
             <span className="block">for doesn&apos;t exist</span>
           </h1>
         </div>
 
-        <p className="mt-8 max-w-[90vw] text-xs leading-5 text-white/80">
+        <p className="mt-8 max-w-[90vw] text-sm md:text-base lg:text-lg font-normal leading-[160%] text-[#E5E6E8]">
           Try to use a correct url or go back to homepage to start again
         </p>
         <Link
           href="/"
-          className="mt-6 inline-flex h-[34px] items-center justify-center rounded-full bg-primary px-5 text-[10px] font-medium text-black transition-colors hover:bg-primary-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#043ee3]"
+          className="mt-6 inline-flex h-10 md:h-[46px] items-center justify-center rounded-full bg-primary px-5 text-sm md:text-base lg:text-lg leading-[120%] font-medium text-[#242528] transition-colors hover:bg-primary-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#043ee3]"
         >
           Back to Home
         </Link>

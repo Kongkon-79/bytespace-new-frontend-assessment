@@ -1,7 +1,5 @@
 import Image from "next/image";
 
-import styles from "./trusted-companies.module.css";
-
 const companies = [
   {
     name: "Trusted company 1",
@@ -37,7 +35,7 @@ const companies = [
 
 const CompanyLogos = ({ duplicate = false }: { duplicate?: boolean }) => (
   <div
-    className={`${styles.group} ${duplicate ? styles.duplicate : ""}`}
+    className={`trusted-companies-group${duplicate ? " trusted-companies-duplicate" : ""}`}
     role={duplicate ? undefined : "list"}
     aria-hidden={duplicate ? "true" : undefined}
   >
@@ -52,7 +50,7 @@ const CompanyLogos = ({ duplicate = false }: { duplicate?: boolean }) => (
           width={company.width}
           height={company.height}
           sizes="(max-width: 640px) 132px, 168px"
-          className={styles.logo}
+          className="trusted-companies-logo"
         />
       </div>
     ))}
@@ -65,8 +63,8 @@ const TrustedCompanies = () => {
       aria-label="Companies that trust ByteSpace"
       className="bg-[#F5F5F6] py-9 md:py-10 lg:py-11"
     >
-      <div className={styles.viewport}>
-        <div className={styles.track}>
+      <div className="trusted-companies-viewport">
+        <div className="trusted-companies-track">
           <CompanyLogos />
           <CompanyLogos duplicate />
         </div>
