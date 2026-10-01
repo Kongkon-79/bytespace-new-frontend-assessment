@@ -76,9 +76,9 @@ export default function ProfessionalGrowth() {
       transition={{ duration: 0.55, delay: 0.35 }}
       className="absolute bottom-2 right-0 z-30 w-[190px] rounded-xl bg-white p-3 shadow-[0_14px_26px_rgba(36,37,40,0.14)] sm:right-[2%] sm:w-[205px] lg:bottom-auto lg:left-[350px] lg:right-auto lg:top-[365px] lg:w-[238px]"
     >
-      <p className="text-[10px] font-medium text-[#242528]">Happy Students</p>
-      <p className="mt-0.5 flex items-center gap-1 text-[8px] text-[#777b85]">
-        4.5 (240)
+      <h4 className="text-xs md:text-sm lg:text-base font-medium leading-[24px] text-[#242528]">Happy Students</h4>
+      <p className="mt-0.5 flex items-center gap-1 font-normal text-[8px] md:text-[10px] text-[#82868E]">
+        <strong className="text-[#242528]">4.5</strong> (240)
         <Star className="size-2.5 fill-primary text-primary" />
       </p>
       <div className="mt-2 flex items-center">
@@ -89,10 +89,10 @@ export default function ProfessionalGrowth() {
             alt=""
             width={43}
             height={43}
-            className={`size-6 rounded-full border-2 border-white object-cover ${i ? "-ml-2" : ""}`}
+            className={`size-7 lg:size-8 rounded-full border-2 border-white object-contain ${i ? "-ml-2" : ""}`}
           />
         ))}
-        <span className="-ml-1.5 flex size-7 items-center justify-center rounded-full border-2 border-white bg-primary text-[8px] font-bold text-[#242528]">
+        <span className="-ml-1.5 flex size-7 lg:size-8 items-center justify-center rounded-full border-2 border-white bg-primary text-[10px] md:text-xs leading-[150%] font-bold text-[#242528]">
           2K+
         </span>
       </div>
@@ -102,42 +102,42 @@ export default function ProfessionalGrowth() {
   return (
     <section
       aria-labelledby="professional-growth-heading"
-      className="relative overflow-hidden bg-[radial-gradient(circle_at_12%_4%,rgba(216,251,32,.48),transparent_25%),radial-gradient(circle_at_7%_96%,rgba(216,251,32,.55),transparent_22%),radial-gradient(circle_at_96%_88%,rgba(0,59,226,.18),transparent_25%),linear-gradient(135deg,#f8f9ff,#fff_48%,#f7f8fc)] px-5 py-12 sm:px-8 sm:py-20 lg:py-[90px]"
+      className="relative overflow-hidden bg-[radial-gradient(circle_at_12%_4%,rgba(216,251,32,.48),transparent_25%),radial-gradient(circle_at_7%_96%,rgba(216,251,32,.55),transparent_22%),radial-gradient(circle_at_96%_88%,rgba(0,59,226,.18),transparent_25%),linear-gradient(135deg,#f8f9ff,#fff_48%,#f7f8fc)] px-5 py-12 sm:px-8 sm:py-20 lg:py-[90px] "
     >
       <div className="container lg:px-0">
-        <div className="grid items-center gap-10 sm:gap-14 lg:flex lg:items-center lg:justify-between lg:gap-0">
+        <div className="grid items-center gap-10 md:gap-12 lg:flex lg:items-center lg:justify-between lg:gap-0">
           <motion.div
             initial={reduced ? false : "hidden"}
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
             variants={reveal}
             transition={{ duration: 0.65 }}
-            className="max-w-[510px]"
+            className="max-w-[530px]"
           >
-            <h3
+            <h2
               id="professional-growth-heading"
-              className="text-balance text-[30px] font-semibold leading-[1.12] tracking-[-.035em] text-[#242528] sm:text-[42px] sm:leading-[1.08] lg:text-[42px]"
+              className="text-balance text-3xl md:text-4xl lg:text-[44px] font-semibold leading-[120%] tracking-[-.035em] text-[#242528]"
             >
               Your Path to Professional Growth Starts Here!
-            </h3>
-            <p className="mt-5 max-w-[492px] text-sm leading-[1.7] text-[#5d616a] sm:mt-7 sm:text-base lg:text-base">
+            </h2>
+            <p className="mt-5 md:mt-7 max-w-[492px] text-sm md:text-base lg:text-lg font-normal leading-[160%] text-[#4B4C53]">
               Explore our curated selection of courses tailored to enhance your
               capabilities and accelerate your career journey. Whether you are
               looking to sharpen specific skills, gain industry expertise, or
               embark on a new career path entirely, we have the resources you
               need.
             </p>
-            <dl className="mt-8 flex max-w-[300px] justify-between gap-5 sm:mt-9 sm:max-w-none sm:justify-start sm:gap-14">
+            <dl className="mt-8 md:mt-10 flex max-w-[300px] justify-between gap-5 sm:max-w-none sm:justify-start sm:gap-14">
               {[
                 ["12K", "Students"],
                 ["70+", "Courses"],
                 ["16", "Creators"],
               ].map(([value, label]) => (
                 <div key={label}>
-                  <dt className="text-[25px] font-semibold leading-none tracking-[-.04em] text-[#003be2]">
+                  <dt className="text-2xl md:text-3xl lg:text-4xl font-medium leading-[44px] tracking-[-.04em] text-secondary font-poppins">
                     {value}
                   </dt>
-                  <dd className="mt-2 text-xs text-[#60646d] sm:text-sm">
+                  <dd className="mt-1 text-sm md:text-base lg:text-lg text-[#4B4C53] font-normal leading-[160%]">
                     {label}
                   </dd>
                 </div>
@@ -145,13 +145,13 @@ export default function ProfessionalGrowth() {
             </dl>
           </motion.div>
 
-          <div className="relative mx-auto h-[390px] w-full max-w-[570px] sm:h-[500px] lg:mx-0 lg:h-[575px] lg:w-[612px] lg:max-w-none">
+          <div className="relative mx-auto h-[390px] w-full max-w-[570px] md:h-[500px] lg:mx-0 lg:h-[575px] lg:w-[612px] lg:max-w-none ">
             <motion.div
               initial={reduced ? false : { opacity: 1, scale: 0.94, y: 28 }}
               whileInView={{ opacity: 1, scale: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.72 }}
-              className="absolute right-[2%] top-0 z-10 w-[230px] rounded-2xl border border-[#dfe1e8] bg-white p-2 shadow-[0_18px_30px_rgba(36,37,40,.12)] sm:right-[8%] sm:w-[290px] md:right-[34%] md:w-[62%] md:rounded-[22px] md:p-2 lg:left-[44px] lg:right-auto lg:top-[30px] lg:w-[342px] lg:rounded-[18px] lg:p-2"
+              className="absolute right-[2%] top-0 z-10 w-full rounded-[24px] border border-[#CED0D3] bg-white p-3 md:p-4 shadow-[0_18px_30px_rgba(36,37,40,.12)] sm:right-[8%] sm:w-[290px] md:right-[34%] md:w-[62%] lg:left-[44px] lg:right-auto lg:top-[30px] lg:w-[342px]"
             >
               <div className="relative aspect-[1.75/1] overflow-hidden rounded-xl bg-slate-100">
                 <Image
@@ -230,12 +230,12 @@ export default function ProfessionalGrowth() {
               whileInView={{ opacity: 1, x: 0, ...float(7, 5.5, 0.7) }}
               viewport={{ once: true }}
               transition={{ duration: 0.55, delay: 0.25 }}
-              className="absolute right-0 top-[118px] z-30 w-[144px] rounded-xl bg-white p-3 shadow-[0_14px_26px_rgba(36,37,40,.14)] sm:top-[144px] sm:w-[174px] md:top-[14%] md:w-[42%] md:rounded-2xl md:p-3 lg:left-[358px] lg:right-auto lg:top-[224px] lg:w-[216px] lg:rounded-[18px] lg:p-4"
+              className="absolute right-28 top-[118px] z-30 w-[144px] rounded-xl bg-white p-3 shadow-[0_14px_26px_rgba(36,37,40,.14)] sm:top-[144px] sm:w-[174px] md:top-[14%] md:w-[42%] md:rounded-2xl md:p-3 lg:left-[358px] lg:right-auto lg:top-[224px] lg:w-[216px] lg:rounded-[18px] lg:p-4"
             >
-              <p className="text-[10px] font-medium sm:text-xs lg:text-[13px]">
+              <p className="text-xs md:text-sm font-medium leading-[24px] text-[#242528] font-medium">
                 Learning Progress
               </p>
-              <p className="mt-1 text-[32px] font-bold leading-none sm:text-[42px] md:text-[32px] lg:mt-3 lg:text-[44px]">
+              <p className="mt-1 md:mt-2 text-3xl md:text-4xl lg:text-5xl font-semibold leading-[120%] font-poppins">
                 <motion.span>{displayedProgress}</motion.span>%
               </p>
               <div className="mt-3 h-1.5 overflow-hidden rounded-full bg-[#eee] lg:mt-3 lg:h-2">
@@ -262,7 +262,7 @@ export default function ProfessionalGrowth() {
                 src="/images/professional_growth_right_shape.png"
                 alt=""
                 width={216}
-                height={216}
+                height={316}
                 className="h-auto w-full"
               />
             </motion.div>
@@ -271,20 +271,20 @@ export default function ProfessionalGrowth() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.75, delay: 0.15 }}
-              className="absolute bottom-[-8px] left-1/2 z-20 w-[82vw] max-w-[300px] -translate-x-1/2 sm:bottom-[-42px] sm:left-[21%] sm:w-[370px] sm:max-w-none sm:translate-x-0 md:bottom-[24%] md:left-[12%] md:w-[76%] lg:left-[18px] lg:top-[5px] lg:w-[620px]"
+              className="absolute bottom-[-8px] left-1/2 z-20 w-[82vw] max-w-[300px] -translate-x-1/2 sm:bottom-[-42px] sm:left-[21%] sm:w-[370px] sm:max-w-none sm:translate-x-0 md:bottom-[24%] md:left-[12%] md:w-[76%] lg:left-[18px] lg:top-[40px] lg:w-[620px]"
             >
               <Image
                 src="/images/professional_growth_right.png"
                 alt="Student learning with a laptop"
                 width={703}
-                height={688}
+                height={788}
                 className="h-auto w-full"
               />
             </motion.div>
           </div>
         </div>
 
-        <div className="mt-10 grid items-center gap-10 sm:mt-12 sm:gap-14 lg:mt-4 lg:flex lg:items-center lg:justify-between lg:gap-0">
+        <div className="mt-8 md:mt-0 grid items-center gap-10 sm:gap-14 lg:flex lg:items-center lg:justify-between lg:gap-0">
           <div className="relative order-2 mx-auto h-[385px] w-full max-w-[510px] sm:h-[405px] lg:order-1 lg:mx-0 lg:h-[575px] lg:w-[612px] lg:max-w-none">
             <motion.div
               initial={reduced ? false : { opacity: 1, x: -28 }}
@@ -319,10 +319,10 @@ export default function ProfessionalGrowth() {
               viewport={{ once: true }}
               className="absolute left-0 top-[35px] z-10 w-[126px] rounded-xl bg-[#003be2] p-3 text-white shadow-[0_14px_26px_rgba(0,59,226,.24)] sm:left-[2%] sm:top-[30px] sm:w-[150px] lg:left-[90px] lg:top-[34px] lg:w-[224px] lg:p-4"
             >
-              <p className="text-[10px] font-medium">Total Revenue</p>
-              <p className="text-[8px] text-white/75">July 1-28</p>
-              <p className="mt-2 text-lg font-bold leading-none">$120.29</p>
-              <div className="mt-2 h-1 overflow-hidden rounded-full bg-white/25">
+              <p className="text-xs md:text-sm lg:text-base text-[#F6F6F6] leading-[120%] font-medium">Total Revenue</p>
+              <p className="text-[10px] md:text-xs text-[#F5F5F6] font-normal leading-[120%]">July 1-28</p>
+              <p className="mt-1 text-lg md:text-xl lg:text-2xl text-[#F5F5F6] font-semibold leading-[32px] font-poppins">$120.29</p>
+              <div className="mt-2 h-2 overflow-hidden rounded-full bg-white/25">
                 <motion.div
                   initial={reduced ? false : { width: 0 }}
                   whileInView={{ width: "70%" }}
@@ -340,12 +340,12 @@ export default function ProfessionalGrowth() {
               initial={reduced ? false : { opacity: 1, x: -20 }}
               whileInView={{ opacity: 1, x: 0, ...float(6, 5.4, 1.3) }}
               viewport={{ once: true }}
-              className="absolute left-0 top-[139px] z-10 w-[105px] rounded-xl bg-[#003be2] p-3 text-white shadow-[0_14px_26px_rgba(0,59,226,.24)] sm:left-[2%] sm:top-[140px] sm:w-[123px] lg:left-[90px] lg:top-[170px] lg:w-[123px]"
+              className="absolute left-0 top-[149px] z-10 w-[115px] rounded-xl bg-[#003be2] p-3 text-white shadow-[0_14px_26px_rgba(0,59,226,.24)] sm:left-[2%] sm:top-[140px] md:w-[123px] lg:left-[90px] lg:top-[190px] lg:w-[135px]"
             >
-              <p className="text-[9px] font-medium">Year To Date</p>
-              <p className="text-[8px] text-white/75">2023</p>
-              <p className="mt-2 text-base font-bold leading-none">$1,200.38</p>
-              <span className="mt-2 inline-flex rounded-full bg-primary px-1.5 py-0.5 text-[8px] font-bold text-[#242528]">
+              <p className="text-xs md:text-sm lg:text-base text-[#F5F5F6] leading-[120%] font-medium">Year To Date</p>
+              <p className="text-[8px] md:text-[10px] text-[#F5F5F6] font-normal leading-[120%]">2023</p>
+              <p className="mt-2 text-lg md:text-xl lg:text-2xl text-[#F5F5F6] font-semibold leading-[32px] font-poppins">$1,200.38</p>
+              <span className="mt-2 inline-flex rounded-full bg-primary px-1.5 py-0.5 text-[8px] md:text-[10px] leading-[20px] font-medium text-[#242528]">
                 +12%
               </span>
             </motion.div>
@@ -359,11 +359,11 @@ export default function ProfessionalGrowth() {
             transition={{ duration: 0.65 }}
             className="order-1 max-w-[510px] lg:order-2"
           >
-            <h3 className="text-balance text-[30px] font-semibold leading-[1.12] tracking-[-.035em] text-[#242528] sm:text-[42px] sm:leading-[1.08] lg:text-[44px]">
+            <h2 className="text-balance text-3xl md:text-4xl lg:text-5xl font-semibold leading-[120%] tracking-[-.035em] text-[#242528]">
               Create &amp; Manage Courses Easily.
-            </h3>
-            <p className="mt-5 text-sm leading-[1.7] text-[#5d616a] sm:mt-7 sm:text-base">
-              ByteSpace supports individuals or entities in the creation,
+            </h2>
+            <p className="mt-5 md:mt-7 text-sm md:text-base lg:text-lg leading-[28px] font-normal text-[#4B4C53]">
+              <strong className="text-[#242528] font-bold">ByteSpace</strong> supports individuals or entities in the creation,
               publication, and administration of educational courses.
             </p>
             <ul className="mt-6 space-y-2.5 text-sm text-[#30333a] sm:mt-8 sm:space-y-3 sm:text-base">
@@ -373,8 +373,8 @@ export default function ProfessionalGrowth() {
                 "Flexibility and Autonomy",
                 "Build a Community",
               ].map((item) => (
-                <li key={item} className="flex items-center gap-2.5">
-                  <CheckCircle2 className="size-4 shrink-0 fill-[#003be2] text-white" />
+                <li key={item} className="flex items-center gap-2.5 text-sm md:text-base lg:text-lg leading-[120%] font-medium text-[#242528]">
+                  <CheckCircle2 className="size-6 shrink-0 fill-secondary text-white" />
                   {item}
                 </li>
               ))}

@@ -125,12 +125,12 @@ const Hero = () => {
               name="q"
               type="search"
               placeholder="Course, topic, creator"
-              className="h-11 md:h-[46px] rounded-full border-0 bg-white pl-11 pr-5 text-sm md:text-base lg:text-lg text-[#242528] leading-[120%] shadow-none placeholder:text-[#82868E] focus-visible:border-primary focus-visible:ring-primary/30 "
+              className="h-11 md:h-12 lg:h-13 rounded-full border-0 bg-white pl-11 pr-5 text-sm md:text-base lg:text-lg text-[#242528] leading-[120%] shadow-none placeholder:text-[#82868E] focus-visible:border-primary focus-visible:ring-primary/30 "
             />
           </div>
           <Button
             type="submit"
-            className="h-11 md:h-[46px] rounded-full bg-primary px-7 text-sm md:text-base lg:text-lg font-medium text-[#242528] leading-[120%] shadow-none hover:bg-primary-hover focus-visible:ring-white/60 sm:self-center lg:px-6"
+            className="h-11 md:h-12 lg:h-13 rounded-full bg-primary px-7 text-sm md:text-base lg:text-lg font-medium text-[#242528] leading-[120%] shadow-none hover:bg-primary-hover focus-visible:ring-white/60 sm:self-center lg:px-6"
           >
             Search
           </Button>
